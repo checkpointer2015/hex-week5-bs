@@ -1,0 +1,165 @@
+---
+title: 第五週 - 後台表單設計
+layout: ./app/layout.ejs
+engine: ejs
+current: assignment
+---
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+  </head>
+  <body>
+    <div class="d-flex flex-row-reverse">
+      <main class="w-100">
+        <div class="main">
+          <div class="container-fluid">
+            <div class="main__header">
+              <div class="main__title">
+                <h1>Assignment</h1>
+                <button class="btn mr-auto main__option" type="button" data-toggle="modal" data-atget="#newAdmin"><span>All Courses</span><i class="material-icons">keyboard_arrow_down</i></button>
+              </div>
+              <ul class="main__others list-unstyled">
+                <li><a href="#"><i class="material-icons">search</i></a></li>
+                <li><a href="#"><i class="material-icons">notifications_active</i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center pb-xs">
+                  <p class="d-flex">ALL(4)<a class="pl-2 material-icons clr--primary" href="#">keyboard_arrow_down</a></p><span class="text-xs clr--light">2 comments</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4 assignmentAll">
+                <ul class="list-unstyled pl0 border border-primary border-top-0">
+                  <li class="border-top-primary selected"><a class="p-xs d-block" href="#">
+                      <p class="pb-1 text-xs d-flex justify-content-between">Chapter Assignment 2<span class="text-nowrap text-xs">4 hrs ago</span></p>
+                      <h2 class="font-weight-bold text-base d-flex justify-content-between align-items-center">Please check this file…<span class="text-nowrap text-xs clr--light">Emily Wang</span></h2></a></li>
+                  <li class="border-top-primary"><a class="p-xs d-block" href="#">
+                      <p class="pb-1 text-xs d-flex justify-content-between">Chapter Assignment 1<span class="text-nowrap text-xs">12 hrs ago</span></p>
+                      <h2 class="font-weight-bold text-base d-flex justify-content-between align-items-center">My Homework<span class="text-nowrap text-xs clr--light">David Xu</span></h2></a></li>
+                  <li class="border-top-primary"><a class="p-xs d-block" href="#">
+                      <p class="pb-1 text-xs d-flex justify-content-between">Final Assignment<span class="text-nowrap text-xs">18 hrs ago</span></p>
+                      <h2 class="font-weight-bold text-base d-flex justify-content-between align-items-center">Have a problem with this…<span class="text-nowrap text-xs clr--light">Tony Wei</span></h2></a></li>
+                  <li class="border-top-primary"><a class="p-xs d-block" href="#">
+                      <p class="pb-1 text-xs d-flex justify-content-between">Final Assignment<span class="text-nowrap text-xs">19 hrs ago</span></p>
+                      <h2 class="font-weight-bold text-base d-flex justify-content-between align-items-center">Did I do it right?<span class="text-nowrap text-xs clr--light">Christina Lin</span></h2></a></li>
+                </ul>
+              </div>
+              <div class="col-8">
+                <div class="border border-primary position-relative">
+                  <div class="border-bottom-primary d-flex justify-content-between py-xs px-base align-items-center selected">
+                    <div class="d-flex flex-column">
+                      <p class="pb-1 text-xs">Chapter Assignment 2 / HTML&CSS</p>
+                      <h2 class="font-weight-bold text-base">Please check this file for me, thanks!</h2>
+                    </div>
+                    <div class="btn-group dropleft">
+                      <button class="btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="d-flex material-icons">more_vert</i></button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#">EDIT</a><a class="dropdown-item" href="#">DELETE</a></div>
+                    </div>
+                  </div>
+                  <div class="assignmentInfo__inner py-base">
+                    <div class="d-flex pl-3 pr-32">
+                      <div class="photo pic-1 rounded-circle"></div>
+                      <div class="pl-2 pb-3 border-bottom-primary">
+                        <p class="text-base font-weight-bold">Emily Wang</p><span class="text-xs clr--light">10:38 AM (4 hours ago)</span>
+                        <p class="text-sm py-3">Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the 
+                          <mark>div</mark> is bigger than the height of the 
+                          <mark>img</mark> ? There is a gap below the image, but it doesn’t seems to be a padding/margin. What is the gap or extra space below image?
+                        </p><a class="bg-primary d-inline-flex align-items-center border border-primary py-xs px-base" href="#" style="height:40px"><i class="material-icons">attach_file</i><span class="pl-2 font-weight-bold">HW-2-David.zip</span></a>
+                      </div>
+                    </div>
+                    <div class="d-flex pl-3 pr-32 pt-3">
+                      <div class="photo pic-2 rounded-circle"></div>
+                      <div class="pl-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="text-base font-weight-bold">Andy Chen (You)</p><span class="d-flex"><a class="material-icons mr-4" href="#">star_border</a><a class="material-icons" href="#">edit</a></span>
+                        </div><span class="text-xs clr--light">13:24 AM (1 hours ago)</span>
+                        <p class="text-sm py-3">Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q. 　</p>
+                        <p>You can:</p>
+                        <ul class="pt-4 pl-2">
+                          <li class="customList">adjust the 
+                            <mark>vertical-align</mark> of the image to position it elsewhere (e.g. the 
+                            <mark>middle</mark> ) or
+                          </li>
+                          <li class="customList">change the 
+                            <mark>display</mark> so it isn’t inline.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pt-3 d-flex justify-content-between align-items-center">
+                  <div class="d-flex"><a class="material-icons mr-4" href="#">chevron_left</a><a class="material-icons" href="#">chevron_right</a></div>
+                  <div class="d-flex">
+                    <button class="font-weight-bold px-5 btn btn-outline-primary" type="button">Mark as read</button>
+                    <button class="font-weight-bold ml-3 px-5 btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#replyEditor" aria-expanded="false" aria-controls="replyEditor">Reply</button>
+                  </div>
+                </div>
+                <div class="replyEditor border border-primary collapse" id="replyEditor">
+                  <div class="border-bottom-primary d-flex justify-content-between py-xs px-base align-items-center bg-primary">
+                    <div class="d-flex">
+                      <div class="btn-group dropbottom mr-4">
+                        <button class="font-weight-bold btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Body Text</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="h1 dropdown-item" href="#">Heading 1</a><a class="h2 dropdown-item" href="#">Heading 2</a><a class="h3 dropdown-item" href="#">Heading 3</a><a class="h4 dropdown-item" href="#">Heading 4</a><a class="h5 dropdown-item" href="#">Heading 5</a><a class="h6 dropdown-item" href="#">Heading 6</a><a class="text-base dropdown-item" href="#">Body Text</a></div>
+                      </div>
+                      <ul class="d-flex align-items-center list-unstyled">
+                        <li class="mr-4 d-flex"><a class="material-icons" href="#">format_bold</a></li>
+                        <li class="mr-4 d-flex"><a class="material-icons" href="#">format_italic</a></li>
+                        <li class="mr-4 d-flex"><a class="material-icons" href="#">format_list_bulleted</a></li>
+                        <li class="mr-4 d-flex"><a class="material-icons" href="#">format_list_numbered</a></li>
+                        <li class="mr-4 d-flex"><a class="material-icons" href="#">insert_photo</a></li>
+                        <li class="mr-4 d-flex"><a class="material-icons" href="#">insert_link</a></li>
+                        <li class="mr-4 d-flex"><a class="material-icons" href="#">code</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <textarea class="w-100 px-4 py-4 border-0 clr-light" id="replyMessage" cols="30" rows="5" name="replyMessage" placeholder="Reply an answer…"></textarea>
+                  <div class="d-flex justify-content-end mr-4 mb-4">
+                    <button class="font-weight-bold px-5 btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#replyEditor" aria-expanded="true" aria-controls="replyEditor">Cancel</button>
+                    <button class="font-weight-bold ml-3 px-5 btn btn-primary">Reply</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <aside class="aside bg-primary">
+        <nav class="aside__nav">
+          <ul class="list-unstyled">
+            <li class="pl-5 mb-0"><a href="#">
+                <figure class="figure"><img class="img-fluid" src="./assets/images/logo-ANSWER.svg" alt=""></figure></a></li>
+            <li class="pl-5 mb-5"><a href="#"><span class="material-icons">assessment</span>
+                <p>Dashboard</p></a></li>
+            <li class="pl-5 mb-5"><a href="#"><span class="material-icons">question_answer</span>
+                <p>Question</p></a></li>
+            <li class="pl-5 mb-5 nav--active"><a href="assignment.html"><span class="material-icons">assignment</span>
+                <p>Assignment</p></a></li>
+            <li class="pl-5 mb-5"><a href="#"><span class="material-icons">video_library</span>
+                <p>Course</p></a></li>
+            <li class="pl-5 mb-5"><a href="admin.html"><span class="material-icons">people_alt</span>
+                <p>Admin</p></a></li>
+            <li class="pl-5 mb-0"><a href="#"><span class="material-icons">settings</span>
+                <p>Settings</p></a></li>
+          </ul>
+        </nav>
+        <div class="aside__footer pl-5">
+          <div class="photo pic-2 rounded-circle"></div>
+          <div class="aside__description">
+            <p>Andy Chen</p><a href="mailto:andy0401@mail.com">andy0401@mail.com</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <footer>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </footer> 
+  </body>
+</html>
